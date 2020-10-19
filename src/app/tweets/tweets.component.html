@@ -1,0 +1,81 @@
+<app-menu>
+</app-menu>
+
+<div *ngIf="listTweets.length> 0">
+  <div class="row" *ngFor="let tweet of listTweets">
+    <div class="col-12">
+      <mat-card class="card">
+        <!-- Row -->
+        <div class="row">
+          <!-- column -->
+          <div class="col-lg-3 col-md-6">
+            <!-- Card -->
+            <div class="card">
+              <mat-card-header>
+                <div mat-card-avatar class="header-image"></div>
+                <mat-card-title>La Xiomis</mat-card-title>
+                <mat-card-subtitle>@xiomthebest</mat-card-subtitle>
+              </mat-card-header>
+              <div class="card-body">
+                <mat-card-content class="card-int">                
+                    {{tweet.message}}                  
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-icon-button class="example-icon favorite-icon"
+                    aria-label="Example icon-button with heart icon">
+                    <mat-icon>favorite</mat-icon>
+                  </button>
+                  <button mat-icon-button class="example-icon"
+                    aria-label="Example icon-button with share icon">
+                    <mat-icon>share</mat-icon>
+                  </button>
+                  <p>
+                  </p>
+                  <mat-card-subtitle>Create Date : {{tweet.published_date |
+                    date: "dd/MM/yy"}} </mat-card-subtitle>
+                </mat-card-actions>
+              </div>
+            </div>
+            <!-- Card -->
+          </div>
+          <!-- column -->
+        </div>
+        <!-- Row -->
+      </mat-card>
+    </div>
+  </div>
+  <app-button>
+  </app-button>
+</div>
+
+
+
+<div *ngIf="listTweets.length == 0">
+
+
+</div>
+
+
+
+<!-- <div *ngFor="let tweet of listTweets">
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+            {{tweet.message}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+        <p>
+        </p>                
+        Create Date : {{tweet.published_date  | date: "dd/MM/yy"}} 
+      </mat-card-actions>
+    </mat-card>
+</div> -->
