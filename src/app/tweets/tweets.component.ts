@@ -13,7 +13,7 @@ export class dialogContentTweet {
   
   public dialogRef: MatDialogRef<dialogContentTweet>;
   @Inject(Tweet)
-  public data: Tweet ;
+  public data: Tweet  = new Tweet();
   constructor()
     { }
 
@@ -21,6 +21,9 @@ export class dialogContentTweet {
     this.dialogRef.close();
   };
 };
+
+
+
 
 @Component({
   selector: 'app-tweets',
@@ -42,8 +45,14 @@ export class TweetsComponent implements OnInit {
 
 
   public openNewTweet(){
-    const dialogRef = this.dialog.open(dialogContentTweet)
-  }
+    const dialogRef = this.dialog.open(dialogContentTweet, {
+      data: {idUser:1, message: '', published_date: ''}
+   }) ;
+  dialogRef.afterClosed().subscribe(result => {
+   this.message = result;
+   this.crearTweet(this.message);        
+  });
+  };
 
   public getTweets() {
     this.twitter.ShowTweets().subscribe( (res: any) => {
