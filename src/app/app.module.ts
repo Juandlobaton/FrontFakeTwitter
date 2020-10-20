@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 /*Services*/
 
@@ -13,8 +14,8 @@ import { TweetServicesService } from './Services/tweet-services.service';
 /*Component*/
 
 import { TweetsComponent } from './tweets/tweets.component';
-import { TweetComponent } from './tweet/tweet.component';
 import { MenuComponent } from './menu/menu.component';
+import { dialogContentTweet } from './tweets/tweets.component';
 
 /*Angular Material*/
 
@@ -23,6 +24,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ButtonComponent } from './button/button.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
 
 
 
@@ -30,9 +34,9 @@ import { ButtonComponent } from './button/button.component';
   declarations: [
     AppComponent,
     TweetsComponent,
-    TweetComponent,
     MenuComponent,
-    ButtonComponent
+    ButtonComponent,
+    dialogContentTweet
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,11 @@ import { ButtonComponent } from './button/button.component';
     RouterModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule
   ],
   providers: [TweetServicesService],
   bootstrap: [AppComponent]

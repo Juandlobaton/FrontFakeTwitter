@@ -1,5 +1,4 @@
-<app-menu>
-</app-menu>
+<app-menu nuevoTweet="true">  </app-menu>
 
 <div *ngIf="listTweets.length> 0">
   <div class="row" *ngFor="let tweet of listTweets">
@@ -31,8 +30,7 @@
                   </button>
                   <p>
                   </p>
-                  <mat-card-subtitle>Create Date : {{tweet.published_date |
-                    date: "dd/MM/yy"}} </mat-card-subtitle>
+                  <mat-card-subtitle>Create Date : {{tweet.published_date |   date: "dd/MM/yy"}} </mat-card-subtitle>
                 </mat-card-actions>
               </div>
             </div>
@@ -50,11 +48,32 @@
 
 
 
+
 <div *ngIf="listTweets.length == 0">
 
 
 </div>
 
+
+<div class="flotante">
+  <div class="col s12">
+      <div class="action-btn-wrapper">
+          <div class="fixed-action-btn my-custom-btn horizontal">
+              <section>    
+                  <div class="example-button-row">
+                    <div class="example-flex-container">       
+                      <div class="example-button-container">
+                        <button  class="primary" (click)="openNewTweet()" mat-fab color="primary"  aria-label="Example icon button with a home icon">
+                          <mat-icon>add</mat-icon>
+                        </button>
+                      </div>0
+                    </div>
+                  </div>
+                </section>
+          </div>
+      </div>
+  </div>
+</div>
 
 
 <!-- <div *ngFor="let tweet of listTweets">

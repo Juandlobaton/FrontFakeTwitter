@@ -11,7 +11,7 @@
   }
   
   .header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('https://1.bp.blogspot.com/-OwGYyWzqL-s/XXvZD7Hl-8I/AAAAAAAAQc0/Y7z2o78HqR0xBM5igCHoG2Xu6uTSYBrcACLcBGAsYHQ/s320/23134.jpg');
     background-size: cover;
   }
 
@@ -420,4 +420,56 @@
   color: #fff;
   background-color: #7460ee;
   border-color: #7460ee;
+}
+
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 20px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 10px 10px 10px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.action-btn-wrapper {
+  position: relative;
+}
+
+.fixed-action-btn.my-custom-btn {
+  position: absolute;
+  right: 0px;
+  top: 23px;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+.flotante {
+  display:scroll;
+      position:fixed;
+      bottom:120px;
+      right:0px;
 }
