@@ -58,7 +58,7 @@ export class TweetsComponent implements OnInit {
      }) ;
     dialogRef.afterClosed().subscribe(result => {
      this.message = result;
-     this.crearTweet(this.message);   
+     this.crearTweet(this.message);        
     });
     };
 

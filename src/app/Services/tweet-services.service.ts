@@ -18,11 +18,11 @@ export class TweetServicesService {
   constructor(private http: HttpClient) { }
 
   
-  ShowTweets() {
+  public ShowTweets() {
     return this.http.get(`${environment.api}/posts`);
   }
 
-  saveTweets(Twt: Tweet) {
+ public saveTweets(Twt: Tweet) {
     return this.http.post(`${environment.api}/posts`, Twt);
   }
 
